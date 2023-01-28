@@ -74,7 +74,7 @@ while (flag) {
             break;
         }
     }
-    continueCalculate = prompt("Continue to calculate? (Y/N) ")
+    let continueCalculate = prompt("Continue to calculate? (Y/N) ")
     if (continueCalculate === "y" || continueCalculate === "Y") {
         flag = true;
     }
