@@ -17,13 +17,16 @@ function fibonnaciDigit(digit) {
     let fibanacciNumbers = [];
     if (digit > 0) {
         for (let index = 0; index <= digit; index++) {
-            result += index;
             fibanacciNumbers[index] = index <= 1 ? index :
                 fibanacciNumbers[index - 2] + fibanacciNumbers[index - 1];
         }
+        result = fibanacciNumbers[digit-1];
         console.log(`Fibanaccis ${digit}-th digits = ${result}\nFibanacci numbers \n${fibanacciNumbers}`);
-
-    } else console.log("Fibonnci number must be a non-negative integer");
+        return result;
+    } else {
+        console.log("Fibonnci number must be a non-negative integer");
+        return -1;
+    };
 
 }
 
@@ -33,22 +36,19 @@ function sumAllNumbers(number) {
         result += index;
 
     }
-    console.log(`Sum of the 1 to ${number} = ${result}`)
+    console.log(`Sum of the 1 to ${number} = ${result}`);
+    return result;
 
 }
 
 function countVowelsLetterInText(text) {
-    const vowelsLetters = ["a", "e", "i", "o", "u", "y"];
     let countVowelsLetters = 0;
     for (let index = 0; index < text.length; index++) {
-        switch (text[index]) {
-            case "a":
-            case "e":
-            case "i":
-            case "o":
-            case "u":
-            case "y": countVowelsLetters += 1;
-        }
+        if (text[index] === "a" || text[index] === "e" || 
+            text[index] === "i" || text[index] === "o" || 
+            text[index] === "u" || text[index] === "y"){
+                countVowelsLetters += 1;
+            }
     }
     return countVowelsLetters;
 }
