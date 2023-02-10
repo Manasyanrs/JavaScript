@@ -16,8 +16,7 @@ function Employee(firstName, lastName, age, gender) {
     this.salary = 0;
 
     this.addContacs = function (phoneNumber, adress, email) {
-        let userContact = new Contact(phoneNumber, adress, email)
-        this.contacts = userContact;
+        this.contacts[this.contacts.length] = { phoneNumber, adress, email };
     };
 }
 
@@ -50,8 +49,7 @@ function MobileCenter() {
     }
 
     this.addStoreContacts = function (phoneNumber, adress, email) {
-        let shopContact = new Contact(phoneNumber, adress, email)
-        this.shopeAdress = shopContact;
+        this.shopeAdress[this.shopeAdress.length] = { phoneNumber, adress, email };
     }
 
     this.addNetworkAdress = function (region1, city, phoneNumber, adress, email) {
