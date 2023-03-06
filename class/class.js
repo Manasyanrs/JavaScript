@@ -1,12 +1,6 @@
 "use strict"
 
 class MyDate {
-    // _year = 0;
-    // _month = 0;
-    // _day = 0;
-    // _hour = 0;
-    // _minutes = 0;
-    // _second = 0;
     _strMonth = ["Yan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
     _deysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 
