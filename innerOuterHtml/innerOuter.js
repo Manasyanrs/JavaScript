@@ -17,26 +17,18 @@ let data = {
 };
 
 
-function p(obj) {
+function p(obj, doc) {
+    let keys = document.createElement(`ul`);
+    doc.append(keys);
+
     for (let i in obj) {
-        if ("object" === typeof obj[i] && Object.keys(obj[i]).length > 1) {
-            let keys1 = document.createElement(`li`);
-            keys1.innerHTML = `<li>${i}</li>`;
-            document.querySelector(`.ul`).append(keys1);
-            p(obj[i]);
+        let keys1 = document.createElement(`li`);
+        keys1.textContent = i;
+        keys.append(keys1);
 
-        } else {
-            let keys = document.createElement(`ul`);
-            keys.innerHTML = `<li>${i}</li>`;
-            document.querySelector(`.ul`).append(keys);
-
+        if ("object" === typeof obj[i]) {
+            p(obj[i], keys1);
         }
-
     }
 }
-
-document.body.innerHTML = `<div class = "fish"></div>`;
-
-
-document.querySelector(`.fish`).innerHTML = `<ul class = "ul"></ul>`;
-p(data)
+p(data, document.body);
