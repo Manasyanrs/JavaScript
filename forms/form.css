@@ -1,0 +1,27 @@
+.firsdiv{
+    display: flex;
+    width: 600px;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.regionAndCityTableSize {
+    width: 200px;
+    height: 30px;
+}
+
+.inputs{
+    display: flex;
+    /* align-items: flex-start; */
+    justify-content: space-between;
+    margin-top: 20px;
+    /* width: 200px; */
+    height: 30px;
+}
+
+.buttonstyle{
+    display: flex;
+    justify-content: right;
+    
+    margin-top: 10px;
+
+}
