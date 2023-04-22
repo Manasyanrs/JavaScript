@@ -1,0 +1,23 @@
+.feed{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    align-items: center;
+    justify-content: center;
+}
+
+.feedItem{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    border-radius: 5px;
+    box-shadow: #999 0px 2px 2px 2px;
+    margin-bottom: 15px;
+}
+.comentForm{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+
+
+}
